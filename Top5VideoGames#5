@@ -1,0 +1,101 @@
+'''
+MODIFY a value in a list. INSERT a value in a list. REMOVE a value from a list 
+To change a value in a list, we simply use its index and set it equal to a new value like a regular variable:
+
+winners = ["shirley", "brian", "tom"]
+ #Actually Ryan came second
+winners[1] = "ryan"
+
+'''
+
+# Top 5 video games this week
+top_games = ["Battlefield: Hardline", "Final Fantasy: Type-0", "Mario Party 10", "Resident Evil: Revelations 2", "Grand Theft Auto V"]
+print(top_games)
+
+# Change 5th place with the new game and drop the Grand Theft
+top_games[4]="Assassin's Creed: Unity"
+print(top_games)
+
+######################################################################
+''''
+Adding a new value to the end of a list using append()
+To add a new value to the end of a list, we use a function called append():
+
+items = ["pen", "paper", "chalk"]
+#add blackboard to the end 
+items.append("blackboard")
+
+'''
+#Current Knights of Ni!, This is a list of the current members of one chapter of the Knights who say Ni! Print 
+order_knights = ["Stevyn the Kind", "Selle the Swift","Nigs the Fierce", "Jacomynus the Honorable", "Janyn the Warrior", "Mauger the Dragon", "Viliame the Stubborn", "Dreues the Unbreakable"]
+print(order_knights)
+
+#Add the new member and print list
+order_knights.append("Raymond the Brute")
+print(order_knights)
+
+#List of weapons available
+weapons_available = ["Dagger", "Lance", "Flail", "Medieval Sword", "Broadsword", "Falchion sword", "Greatsword", "Longsword"]
+print(weapons_available)
+
+#Add 'mace' to the list and print
+weapons_available.append("mace")
+print(weapons_available)
+
+############################################################################
+# insert an item at a particpualr position 
+'''
+n the list, rather than just at the end. To do this, we use the insert() function:
+
+weekdays = ["Mon", "Tue", "Thu", "Fri"]
+#Add Wed in 3rd position (starts at 0)
+weekdays.insert(2, "Wed")
+'''
+#Incomplete list of Months of the year. Add the rest of the months
+months = ["Jan", "Mar", "Apr", "May", "Jul", "Aug", "Sep", "Nov"]
+
+#insert the missing months at the correct possitions, do one at a time
+#Add in the missing months in order (3 letter abbreviations)
+months.insert(1, "Feb")
+months.insert(5, "June")
+months.insert(9, "Oct")
+months.append("Dec")
+
+print(len(months)). #
+
+############################################################################
+#Current Knights of Ni!
+'''
+Just like adding values, there are 2 ways to remove values from a list:
+
+my_list = ["pen", "pencil", "eraser"]
+#Pop removes from a position using the index 
+my_list.pop(1) #Removes 'pencil' 
+#Remove() uses the value itself, removes 1st 
+  # matching value
+my_list.remove("eraser")#removes 'eraser'
+
+'''
+
+#List of weapons available
+weapons_available = ["Dagger", "Lance", "Flail", "Medieval Sword", "Broadsword", "Falchion sword", "Greatsword", "Longsword"]
+print(weapons_available)
+
+#Remove dagger and print list
+
+
+#Current Knights of Ni!
+order_knights = ["Stevyn the Kind", "Selle the Swift","Nigs the Fierce", "Jacomynus the Honorable", "Janyn the Warrior", "Mauger the Dragon", "Viliame the Stubborn", "Dreues the Unbreakable"]
+print(order_knights)
+
+#Remove Selle the Swift
+order_knights.pop(1)
+print(order_knights)
+
+#List of weapons available
+weapons_available = ["Dagger", "Lance", "Flail", "Medieval Sword", "Broadsword", "Falchion sword", "Greatsword", "Longsword"]
+print(weapons_available)
+
+#Remove dagger and print list
+weapons_available.remove("Dagger")
+print(weapons_available)
