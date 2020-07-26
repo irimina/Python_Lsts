@@ -1,0 +1,34 @@
+'''
+Count how many times a value is in a list
+We know how to find the length of an entire list, but it is also useful to be able to find out how many times a value is in a list. 
+This is useful for several reasons:
+
+To find out if a value is already in a list e.g. before adding it again.
+To find out if a value is in there more than once e.g. to remove duplicates
+To simply find out how many of that value are in the list.
+
+'''
+
+favorite_foods = []
+#Start a loop to ask user to enter their favorite foods
+repeat = True
+while repeat==True:
+  food = input("Please enter a favorite food or 'done' to end input: ")
+  #Check if user has entered done so that loop can be stopped if so
+  if food == 'done':
+    repeat = False
+  else:
+    count = favorite_foods.count(food)
+    #Check if food is already in list
+    #If so, give user error message, otherwise add the food and give success message
+    if count > 0:
+      print("Sorry", food, "is already on the list!")
+    else:
+      favorite_foods.append(food)
+      print(food, "has been added!")
+
+#Once user is done, print out their list for them
+print("Your favorite foods are: ")
+
+for food in favorite_foods:
+  print(food.title()) #Add a capital letter
