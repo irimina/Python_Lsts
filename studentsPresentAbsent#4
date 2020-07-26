@@ -1,0 +1,27 @@
+'''
+Finding the length of a list using len()
+We can use the function len() on a string and it will tell us how many characters, including spaces, are in the string:
+
+a_string = "hovercraft"
+print(len(a_string)) #Prints 10
+When used on a list, it tells us how many items are in the list:
+
+fruits = ["apple", "banana", "coconut"]
+print(len(fruits)) #Prints 3
+
+'''
+# DATABASE STUDENTS PRESENT AND ABSENT
+
+students_present = ["tommy", "dahlia", "manaia", "isaac", "jamila", "britt", "patrick", "jessika", "chantal", "rocio"]
+students_absent = ["iliana", "olympia", "juan", "kelsey"]
+
+print("There are ", len(students_present), "and", len(students_absent))
+
+student = input("Enter a name to find out if the student is present or absent: ")
+
+if student in students_present:
+  print(student.capitalize(), " is present today.")
+elif student in students_absent:
+  print(student.title(), " is absent today.")
+else:
+  print("Sorry, no student called ", student.title(), "exists!")
