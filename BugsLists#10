@@ -1,0 +1,221 @@
+'''
+Project: Make a quiz 
+
+Bug hunt #1
+There are a lot of common bugs that can happen when we're working with lists, and it can be a bit like searching for a needle in a haystack!
+
+This lesson will help you to become familiar with the most common bugs, while building a basic quiz type program.
+
+Let's get hunting! First up - creating lists.
+
+
+'''
+DRAFT WITH BUGS
+
+#Questions and answers for a quiz
+questions = ["How many bits are in a byte?,
+            "True or False? A nibble is half a byte.",
+            'What year was Google founded?",
+            "How many zeroes are in a Googol?"
+            "How many bytes are in a kilobyte?"
+
+answers = ["8", "true", "1998"; "100", "1024]
+
+#Ask the user their name and welcome them to the quiz
+name = input("What is your name?")
+print("Welcome to the quiz",name," There are 5 questions.")
+
+
+FINAL DRAFT
+
+#Questions and answers for a quiz
+questions = ["How many bits are in a byte?",
+            "True or False? A nibble is half a byte.",
+            "What year was Google founded?",
+            "How many zeroes are in a Googol?",
+            "How many bytes are in a kilobyte?"]
+
+answers = ["8", "true", "1998", "100", "1024"]
+
+#Ask the user their name and welcome them to the quiz
+name = input("What is your name?")
+print("Welcome to the quiz. There are 5 questions)
+
+###################################################################
+# Bug Hunt accessing values
+
+#Questions and answers for a quiz - note that these longer list items are written on one line each to make it easy to read.
+questions = ["How many bits are in a byte?",
+            "True or False? A nibble is half a byte.",
+            "What year was Google founded?",
+            "How many zeroes are in a Googol?",
+            "How many bytes are in a kilobyte?"]
+
+answers = ["8", "true", "1998", "100", "1024"]
+
+#Ask the user their name and welcome them to the quiz
+name = input("What is your name?")
+print("Welcome to the quiz. There are 5 questions.")
+
+#Ask the first question not the secod and get the user's guess from the input
+guess = input(questions[1])
+
+if guess == answers["1"]:
+  print("Correct!")
+else:
+  print("Wrong! The correct answer was {}!".format(answers["0"))
+
+#FINAL DRAFT
+#Questions and answers for a quiz - note that these longer list items are written on one line each to make it easy to read.
+questions = ["How many bits are in a byte? ",
+            "True or False? A nibble is half a byte.",
+            "What year was Google founded?",
+            "How many zeroes are in a Googol?",
+            "How many bytes are in a kilobyte?"]
+
+answers = ["8", "true", "1998", "100", "1024"]
+
+#Ask the user their name and welcome them to the quiz
+name = input("What is your name? ")
+print("Welcome to the quiz, {}! There are 5 questions.")
+
+#Ask the first question and get the user's guess from the input
+guess = input(questions[0])
+
+if guess == answers[0]:
+  print("Correct!")
+else:
+  print("Wrong! The correct answer was",(answers[0]))
+
+###################################################################
+# Bug hunt, This bug hunt will help you find common bugs when adding and deleting values from lists. Mix append with insert or pop with remove methods.
+
+# Read the first comment in the code editor to find out what the program does. Let's go! 
+
+# Final Draft
+#This code shows the user a list of classic games and asks them to choose their favorite. This value gets moved to the top of the list, and then the user can add another game to the list.
+
+#Create a list of some of the top classic games
+top_games = ["pacman", "tetris", "space invaders", "sonic the hedgehog", "super mario brothers", "street fighter", "pong", "donkey kong", "paperboy"]
+
+#Print list of games
+print("Here is a list of some top classic games: ", top_games)
+
+#Ask the user which game they think is the best, and move it to the first position
+choice = input("Which game do you think is the best? Type the name accurately: ").strip().lower()
+
+#Remove the game from its current position
+top_games.remove(choice)
+
+#Add it to the start of the list
+top_games.insert(0, choice)
+
+#Ask the user if they would like to add any other games to the list
+add_more = input("Would you like to add another game that you think is cool? Y/N: ").strip().lower()
+
+if add_more in ["y", "yes", "yep", "yeah"]:
+  new_game = input("Enter the title of the game: ").strip().lower()
+  
+  if not new_game in top_games:
+    top_games.append(new_game)
+  else:
+    print("That game is already in the list!")
+    
+else:
+  print("OK")
+  
+#Print the new list
+print("Here is the new list: ", top_games)
+
+###################################################################
+'''
+Bug Hunt - looping, shuffling and sorting.
+Let's look for some common bugs when looping through lists, shuffling them and sorting them.
+'''
+# draft with BUGS
+
+#This time, our code lets the user specify how many random top games they would like to choose from the list, shuffles the list, then chooses that many games and prints the list out in alphabetical order.
+
+# fix this line below
+import randon
+
+#Create a list of some of the top classic games
+top_games = ["pacman", "tetris", "space invaders", "sonic the hedgehog", "super mario brothers", "street fighter", "pong", "donkey kong", "paperboy"]
+
+#Print list of games, this time with better formatting using a loop
+print("Here is a list of some top classic games: ")
+
+for game in top_games:
+  print(title)
+  
+#Ask the user how many games to pick
+num_games = int(input("How many games would you like to randomly choose?"))
+
+#Shuffle the list
+top_games.shuffle()
+
+#Get the first "n" games, based on the number the user picked
+chosen_games = top_games[0:num_games]
+
+#Sort chosen games into alphabetical order
+random.sort(chosen_games)
+
+#Print final list
+print("\nYour list:")
+for "game" in chosen_games:
+  print("game")
+  
+  
+# FINAL DRAFT 
+#This time, our code lets the user specify how many random top games they would like to choose from the list, shuffles the list, 
+# then chooses that many games and prints the list out in alphabetical order.
+
+import random
+
+#Create a list of some of the top classic games
+top_games = ["pacman", "tetris", "space invaders", "sonic the hedgehog", "super mario brothers", "street fighter", "pong", "donkey kong", "paperboy"]
+
+#Print list of games, this time with better formatting using a loop
+print("Here is a list of some top classic games: ")
+
+for game in top_games:
+  print(game)
+  
+#Ask the user how many games to pick
+num_games = int(input("How many games would you like to randomly choose?"))
+
+#Shuffle the list
+random.shuffle(top_games)
+
+#Get the first "n" games, based on the number the user picked
+chosen_games = top_games[0:num_games]
+
+#Sort chosen games into alphabetical order
+chosen_games.sort()
+
+#Print final list
+print("\nYour list:")
+for game in chosen_games:
+  print(game)
+  
+############################################################
+#Create a list of the alphabet using the list() function
+# this is the correct version
+alpha_string = "abcdefghijklmnopqrstuvwxyz"
+alpha_list = list(alpha_string)
+
+#Print the first 3 letters on new lines
+for letter in alpha_list[0:3]:
+  print(letter)
+  
+#Print l, m, n, o and p
+print(alpha_list[11:16])
+ 
+#Print the last 3 letters
+print(alpha_list[23:])
+ 
+#Print the last letter
+print(alpha_list[-1])
+
+  
+
